@@ -15,14 +15,20 @@ export const SearchBox = () => {
     { value: 'waterTemp', label: 'waterTemp' },
   ];
 
+  const func = () => (
+    // eslint-disable-next-line no-alert
+    alert('Clicked')
+  );
+
   return (
+
     <>
       <Select
         onClick={() => { alert('Clicked'); }}
         isMulti
         options={options}
       />
-      <Button onClick={() => { alert('Clicked'); }} variant="contained" color="secondary">
+      <Button onClick={func} variant="contained" color="secondary">
         Submit
       </Button>
     </>

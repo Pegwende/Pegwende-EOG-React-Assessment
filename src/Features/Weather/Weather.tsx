@@ -53,6 +53,7 @@ const Weather: FC = () => {
   if (loading) return <LinearProgress />;
   if (error) return <Typography color="error">{error}</Typography>;
   if (!data) return <Chip label="Weather not found" />;
+  console.log(data);
   const { locationName, description, temperatureinCelsius } = data.getWeatherForLocation;
 
   return <Chip label={`Weather in ${locationName}: ${description} and ${Math.round(toF(temperatureinCelsius))}°`} />;
